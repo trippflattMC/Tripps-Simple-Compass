@@ -1,0 +1,10 @@
+{
+  "key.toggle_compass": "Toggle compass",
+  "key.compass.open_settings": "Open compass settings",
+  "category.tripps_simple_compass": "Tripp's Simple Compass",
+  "gui.compass.title": "Compass settings",
+  "gui.compass.title2": "Compass moving",
+  "gui.compass.move_button": "Move compass",
+  "settings.compass.title": "Compass settings",
+  "gui.compass.reset_button": "Reset compass position"
+}

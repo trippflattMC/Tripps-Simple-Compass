@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tripps_simple_compass",
+  "version": "${version}",
+  "name": "Tripps Simple Compass",
+  "description": "This mod adds simple compass, lol.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tripps_simple_compass/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.trippflatt.tripps_simple_compass.client.Tripps_simple_compassClient"
+    ],
+    "main": [
+      "com.trippflatt.tripps_simple_compass.Tripps_simple_compass"
+    ]
+  },
+  "mixins": [
+    "tripps_simple_compass.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
