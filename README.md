@@ -5,5 +5,10 @@ Minecraft mod that adds small compass on your screen.
 ___
 
 ## Features
-* You can on / off compass displaying. (Default - G)
-* The position of the compass on the screen can be changed. (Default - J)
+* You can turn on/off the display of the compass. (Default - **G**)
+* You can change the position of the compass on the screen. (Default - **J**)
+
+___
+
+## Versions
+At the moment the mod is only available on version **1.21.1 Fabric**
