@@ -1,5 +1,6 @@
 package com.trippflatt.tripps_simple_compass.util;
 
+import com.trippflatt.tripps_simple_compass.keys.SendLocationKey;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
@@ -21,9 +22,17 @@ public class KeyInputHandler {
             "category.tripps_simple_compass"
     );
 
+    public static final KeyBinding SEND_LOCATION = new KeyBinding(
+            "key.compass.send_location",
+            InputUtil.Type.KEYSYM,
+            GLFW.GLFW_KEY_X,
+            "category.tripps_simple_compass"
+    );
+
     public static void register() {
         KeyBindingHelper.registerKeyBinding(TOGGLE_COMPASS);
         KeyBindingHelper.registerKeyBinding(OPEN_SETTINGS);
+        KeyBindingHelper.registerKeyBinding(SEND_LOCATION);
     }
 
     public static void checkInput(MinecraftClient client) {
@@ -33,6 +42,10 @@ public class KeyInputHandler {
 
         if (OPEN_SETTINGS.wasPressed()) {
             client.setScreen(new CompassSettings());
+        }
+
+        if (SEND_LOCATION.wasPressed()) {
+            SendLocationKey.sendLocation();
         }
     }
 }

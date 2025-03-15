@@ -1,10 +1,13 @@
 {
   "key.toggle_compass": "Переключить компас",
   "key.compass.open_settings": "Открыть настройки компаса",
+  "key.compass.send_location": "Отправить метку",
   "category.tripps_simple_compass": "Tripp's Simple Compass",
   "gui.compass.title": "Настройки компаса",
   "gui.compass.title2": "Передвижение компаса",
   "gui.compass.move_button": "Передвинуть компас",
   "settings.compass.title": "Настройки компаса",
-  "gui.compass.reset_button": "Позиция по умолчанию"
+  "gui.compass.reset_button": "Позиция по умолчанию",
+  "message.compass.error_message": "Прицельтесь на блок или сущность!",
+  "message.compass.location_sent": "Метка на %s. Координаты метки: %s"
 }

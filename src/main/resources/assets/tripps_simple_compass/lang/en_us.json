@@ -1,10 +1,13 @@
 {
   "key.toggle_compass": "Toggle compass",
   "key.compass.open_settings": "Open compass settings",
+  "key.compass.send_location": "Send marker",
   "category.tripps_simple_compass": "Tripp's Simple Compass",
   "gui.compass.title": "Compass settings",
   "gui.compass.title2": "Compass moving",
   "gui.compass.move_button": "Move compass",
   "settings.compass.title": "Compass settings",
-  "gui.compass.reset_button": "Reset compass position"
+  "gui.compass.reset_button": "Reset compass position",
+  "message.compass.error_message": "Target a block or entity!",
+  "message.compass.location_sent": "Marker on %s. Marker coordinates: %s"
 }

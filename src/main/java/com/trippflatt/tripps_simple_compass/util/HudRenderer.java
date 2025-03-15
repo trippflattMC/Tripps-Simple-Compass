@@ -4,6 +4,7 @@ import com.trippflatt.tripps_simple_compass.Tripps_simple_compass;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
@@ -53,23 +54,23 @@ public class HudRenderer {
 
         if (x == 0 && y == 0) {
             Identifier texture = Identifier.of(Tripps_simple_compass.MOD_ID, "textures/gui/compass_background_00.png");
-            drawContext.drawTexture(texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
+            drawContext.drawTexture(RenderLayer::getGuiTextured, texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
         } else if (x == screenWidth - COMPASS_WIDTH && y == screenHeight - COMPASS_HEIGHT) {
             Identifier texture = Identifier.of(Tripps_simple_compass.MOD_ID, "textures/gui/compass_background_03.png");
-            drawContext.drawTexture(texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
+            drawContext.drawTexture(RenderLayer::getGuiTextured, texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
         } else if (x == 0 && y == screenHeight - COMPASS_HEIGHT) {
             Identifier texture = Identifier.of(Tripps_simple_compass.MOD_ID, "textures/gui/compass_background_02.png");
-            drawContext.drawTexture(texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
+            drawContext.drawTexture(RenderLayer::getGuiTextured, texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
         } else if (x == screenWidth - COMPASS_WIDTH && y == 0) {
             Identifier texture = Identifier.of(Tripps_simple_compass.MOD_ID, "textures/gui/compass_background_01.png");
-            drawContext.drawTexture(texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
+            drawContext.drawTexture(RenderLayer::getGuiTextured, texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
         } else {
             Identifier texture = Identifier.of(Tripps_simple_compass.MOD_ID, "textures/gui/compass_background_04.png");
-            drawContext.drawTexture(texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
+            drawContext.drawTexture(RenderLayer::getGuiTextured, texture, x, y, 0, 0, COMPASS_WIDTH, COMPASS_HEIGHT, COMPASS_WIDTH, COMPASS_HEIGHT);
         }
     }
 
-    public static void startDragging(double mouseX, double mouseY) {
+    public static void startDragging() {
         isDragging = true;
     }
 
@@ -103,10 +104,11 @@ public class HudRenderer {
         return y;
     }
 
-    public static void setCompassPosition(int setX, int setY) {
-        x = setX;
-        y = setY;
-    }
+    // future versions
+//    public static void setCompassPosition(int setX, int setY) {
+//        x = setX;
+//        y = setY;
+//    }
 
     public static boolean isDragging() {
         return isDragging;
