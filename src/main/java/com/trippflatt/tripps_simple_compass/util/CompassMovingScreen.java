@@ -15,7 +15,7 @@ public class CompassMovingScreen extends Screen {
     @Override
     protected void init() {
         GLFW.glfwSetCursorPos(client.getWindow().getHandle(), HudRenderer.getX() * 3, HudRenderer.getY() * 3);
-        HudRenderer.startDragging((double) this.width / 2, (double) this.height / 2);
+        HudRenderer.startDragging();
     }
 
     @Override
